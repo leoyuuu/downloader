@@ -1,0 +1,26 @@
+ext {
+    bintrayRepo = 'downloader'
+    //package name
+    bintrayName = 'downloader'
+
+    publishedGroupId = 'com.leoyuu.downloader'
+    artifact = 'downloader'
+    libraryVersion = '0.0.1'
+
+    libraryName = 'downloader'
+    libraryDescription = 'a simple downloader in java'
+    siteUrl = 'https://github.com/leoyuuu'
+
+    gitUrl = 'https://github.com/leoyuuu/downloader.git'
+
+
+    developerId = 'leoyuu'
+    developerName = 'leoyuu'
+    developerEmail = 'july.oloy@qq.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
