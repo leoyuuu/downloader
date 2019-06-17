@@ -33,7 +33,6 @@ import java.io.File
  */
 class MainActivity : AppCompatActivity() {
 
-    private var fileCount = 1
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -41,7 +40,8 @@ class MainActivity : AppCompatActivity() {
         ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.WRITE_EXTERNAL_STORAGE), 1)
         download_btn.setOnClickListener {
             val url = url_et.text?.toString()
-            val file = File(Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_DOWNLOADS), fileCount.toString())
+            val dir = File(Environment.getExternalStorageDirectory(), "SimpleImage")
+            val file = File(dir, "${System.currentTimeMillis()}.jpg")
             if (url == null) {
                 return@setOnClickListener
             }

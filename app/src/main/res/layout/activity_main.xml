@@ -14,6 +14,7 @@
             android:inputType="textUri"
             android:hint="url"
             android:autofillHints="url"
+            android:text="http://k.zol-img.com.cn/sjbbs/7692/a7691515_s.jpg"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

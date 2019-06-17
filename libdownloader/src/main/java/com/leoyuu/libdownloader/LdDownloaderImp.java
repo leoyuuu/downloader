@@ -71,8 +71,19 @@ class LdDownloaderImp {
                 return;
             }
 
-            InputStream stream = connection.getInputStream();
             File temp = item.getCacheFile();
+            File parent = temp.getParentFile();
+            if (parent == null) {
+                invokeFail(item, -1, "file " + item.getLocalPath() + " not support");
+                return;
+            }
+            if (!parent.exists()) {
+                if (!parent.mkdirs()) {
+                    invokeFail(item, -1, "创建父文件夹失败");
+                    return;
+                }
+            }
+            InputStream stream = connection.getInputStream();
             try {
                 OutputStream output = new FileOutputStream(temp);
                 try {
