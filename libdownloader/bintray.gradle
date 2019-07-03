@@ -3,7 +3,7 @@ ext {
     //package name
     bintrayName = 'downloader'
 
-    publishedGroupId = 'leoyuu'
+    publishedGroupId = 'com.leoyuu.utils'
     artifact = 'libdownloader'
     libraryVersion = '0.1.1'
 

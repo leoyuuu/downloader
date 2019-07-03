@@ -79,7 +79,7 @@ class LdDownloaderImp {
             }
             if (!parent.exists()) {
                 if (!parent.mkdirs()) {
-                    invokeFail(item, -1, "创建父文件夹失败");
+                    invokeFail(item, -1, "create parent file failed");
                     return;
                 }
             }
